@@ -5,12 +5,12 @@ Remove the duplicate records from the given JSON based on the following rules.
 3. If the dates are identical the data from the record provided last in the list should be preferred.
 
 # Solution Approach
-Approach1: Given the problem, records have two unique keys (ID, email), so if we are storing
-the records in the list, then for each new record whole need to scan to make sure no duplicate record available.
+Approach1: Given the problem, the records have two unique keys (ID, email), so if we are storing
+the records in the list, then for each new record whole list need to be scan to find the available duplicate records.
 This makes the O(n) time complexity for searching and O(n) for traversing each record, the total problem time complexity is O(n*n).
 
 Approach 2: Using the two maps are providing the O(1) time complexity for searching the record based on ID and email.
-First map store the key as ID and value as Object, another map contains the key as email and value as ID, the total problem time complexity is O(n*1)= O(n)
+First map store the key as ID and value as JSONObject, another map contains the key as email and value as ID, the total problem time complexity is O(n*1)= O(n)
 
 # Getting Started
 This project is java command line, the program starts from Application.java
